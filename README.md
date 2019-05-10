@@ -1,5 +1,8 @@
 # picoplaca_sb
+
 This is a terminal app for Pico placa predictor
+
+Requirements: python 3.x
 
 ## Usage
 For usage this app run the app.py file:
