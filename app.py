@@ -70,7 +70,7 @@ def check_days_restriction(date, license_plate):
     else:
         return False
 
-
+@not_empty
 def check_pico_placa(request):
     if check_days_restriction(request.date, request.license_plate) and check_hours_restriction(request.hour):
         print('[X] You can\'t drive at this date and hour')
@@ -99,7 +99,7 @@ if __name__ == "__main__":
         )
         check_pico_placa(request)
         again_str = input('Type \'a\' for check again or any for exit:')
-        if again_str == 'a':
+        if again_str != 'a':
             again = False
 
 
