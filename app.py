@@ -16,7 +16,7 @@ HOURS_RESTRICTION = ['07:00-09:30', '16:00-19:30']
 
 def check_date():
     while True:
-        date = input('1) Type The date you need to use your car (day-month-year):\n')
+        date = input('2) Type The date you need to use your car (day-month-year):\n')
         try:
             date_to_eval = dt.datetime.strptime(date, DATE_FORMAT).date()
             return date_to_eval
@@ -38,7 +38,7 @@ def check_license_plate():
 
 def check_hour():
     while True:
-        hour = input('1) Type the hour for the day entered 24h(hour:minute):\n')
+        hour = input('3) Type the hour for the day entered 24h(hour:minute):\n')
         hr = str(hour).split(':')
         if len(hr) != 2:
             print('Error: Incorrect hour')
